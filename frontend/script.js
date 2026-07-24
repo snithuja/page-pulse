@@ -1,5 +1,5 @@
 // API URL - Make sure this matches your backend port
-const API_URL = 'http://localhost:5000/api/audit';
+const API_URL = 'https://page-pulse-api-qht6.onrender.com/api/audit';
 
 const form = document.getElementById('auditForm');
 const urlInput = document.getElementById('urlInput');
