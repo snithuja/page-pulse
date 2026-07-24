@@ -226,9 +226,7 @@ app.post('/api/audit', async (req, res) => {
     });
   }
 });
-// ... (all your existing code stays the same) ...
-
-// Health check endpoint
+// Health check endpoint (already exists)
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'healthy', 
@@ -237,7 +235,7 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// ✅ NEW: Root endpoint to show API info
+// ✅ ADD THIS NEW ROOT ENDPOINT
 app.get('/', (req, res) => {
   res.json({
     message: '🚀 Page Pulse API is running!',
@@ -260,14 +258,12 @@ app.get('/', (req, res) => {
       }
     },
     frontend: 'https://willowy-sunflower-9e2e86.netlify.app',
-    documentation: 'https://github.com/snithuja/page-pulse',
     built_for: 'Digital Heroes Training Task'
   });
 });
 
-// Start server
+// Start server (already exists)
 app.listen(PORT, () => {
   console.log(`🚀 Page Pulse backend running on port ${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`🏠 Root: http://localhost:${PORT}/`);
 });
