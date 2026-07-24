@@ -1,0 +1,21 @@
+services:
+  # Backend API
+  - type: web
+    name: page-pulse-api
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+
+  # Frontend Static Site
+  - type: static
+    name: page-pulse-frontend
+    buildCommand: echo "Static site ready"
+    staticPublishPath: ./frontend
+    envVars:
+      - key: API_URL
+        value: https://page-pulse-api.onrender.com/api/audit

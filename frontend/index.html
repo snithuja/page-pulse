@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Pulse - URL Auditor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Page Pulse</h1>
+            <p class="subtitle">Audit any URL instantly</p>
+        </header>
+
+        <div class="search-section">
+            <form id="auditForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="urlInput" 
+                        placeholder="Enter URL (e.g., https://example.com)" 
+                        required
+                    />
+                    <button type="submit" id="auditBtn">Audit</button>
+                </div>
+                <div class="url-examples">
+                    <span>Try: </span>
+                    <button type="button" class="example-btn" data-url="https://example.com">example.com</button>
+                    <button type="button" class="example-btn" data-url="https://github.com">github.com</button>
+                    <button type="button" class="example-btn" data-url="https://news.ycombinator.com">hn</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="results" style="display: none;">
+            <!-- Results will be rendered here -->
+        </div>
+
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Auditing URL...</p>
+        </div>
+
+        <footer>
+            <p>
+                Built for 
+                <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer">
+                    Digital Heroes Training Task
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
